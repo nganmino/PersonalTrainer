@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import MaterialTable from "material-table";
 function TrainingList() {
@@ -28,7 +28,7 @@ function TrainingList() {
             .then((response) => response.json())
             .then((dataC) => {
               console.log(dataC.firstname + " " + dataC.lastname);
-              // setCustomerTrain(dataC.);
+
               x.customerName = dataC.firstname + " " + dataC.lastname;
               setTrain(data.content);
             });
@@ -36,9 +36,6 @@ function TrainingList() {
       })
       .catch((err) => console.error(err));
   };
-
-  // dùng array.propotype.map() để loop qua data.content
-  // trong mỗi 1 loop, lấy data của customer đặt vào trong array training
 
   const columns = [
     {
