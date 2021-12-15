@@ -71,7 +71,7 @@ export default function BasicTabs() {
         <TrainingList />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        {/* <Schedule /> */}
+        <Schedule />
       </TabPanel>
     </Box>
   );
