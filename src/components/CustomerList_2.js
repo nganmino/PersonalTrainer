@@ -67,6 +67,39 @@ function CustomerList() {
             backgroundColor: "#C771AC",
             color: "#FFF",
           },
+          exportButton: true,
+        }}
+        editable={{
+          onRowDelete: (oldData) =>
+            new Promise((resolve, reject) => {
+              setTimeout(() => {
+                const dataDelete = [...customers];
+                const index = oldData.tableData.id;
+                dataDelete.splice(index, 1);
+                setCustomers([...dataDelete]);
+
+                resolve();
+              }, 1000);
+            }),
+          onRowAdd: (newData) =>
+            new Promise((resolve, reject) => {
+              setTimeout(() => {
+                setCustomers([...customers, newData]);
+
+                resolve();
+              }, 1000);
+            }),
+          onRowUpdate: (newData, oldData) =>
+            new Promise((resolve, reject) => {
+              setTimeout(() => {
+                const dataUpdate = [...customers];
+                const index = oldData.tableData.id;
+                dataUpdate[index] = newData;
+                setCustomers([...dataUpdate]);
+
+                resolve();
+              }, 1000);
+            }),
         }}
       />
     </div>

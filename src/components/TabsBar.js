@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import CustomerList from "./CustomerList_2";
 import TrainingList from "./TrainingList";
+import Schedule from "./Schedule";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,7 +54,7 @@ export default function BasicTabs() {
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          // aria-label="basic tabs example"
           indicatorColor="secondary"
           aria-label="secondary tabs example"
           centered
@@ -70,7 +71,7 @@ export default function BasicTabs() {
         <TrainingList />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        {/* <Schedule /> */}
       </TabPanel>
     </Box>
   );
