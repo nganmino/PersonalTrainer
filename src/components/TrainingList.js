@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import MaterialTable from "material-table";
 function TrainingList() {
   const [train, setTrain] = useState([]);
-  const [customerTrain, setCustomerTrain] = useState([]);
 
   React.useEffect(() => {
     fetchTrain();
